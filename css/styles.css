@@ -11,6 +11,10 @@
     --main-white:            #F1F1F1;
     --main-transparentWhite: rgba(241, 241, 241, 0.3);
     --main-transparentBlack: rgba(16, 15, 15, 0.6);
+
+    --second-gray:  #d2d2ca;
+    --second-blue:  rgb(192, 192, 236);
+    --second-green: rgb(5, 164, 5);
     /* Fonts */
     --main-font: 'Krub', sans-serif;
 
@@ -60,6 +64,18 @@ body::-webkit-scrollbar-thumb:hover {
 /************************* Utilities *************************/
 /*************************************************************/
 
+.bg-second-blue {
+    background-color: var(--second-blue);
+}
+
+.bg-second-gray {
+    background-color: var(--second-gray);
+}
+
+.bg-second-green {
+    background-color: var(--second-green);
+}
+
 .button {
     border:           none;
     background-color: var(--main-green);
@@ -93,6 +109,10 @@ body::-webkit-scrollbar-thumb:hover {
 
 .clear-link {
     text-decoration: none;
+}
+
+.clear-list {
+    list-style: none;
 }
 
 .container {
@@ -159,6 +179,10 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 4rem;
 }
 
+#singlePage {
+    margin-top: 12rem;
+}
+
 .text-center {
     text-align: center;
 }
@@ -184,6 +208,10 @@ body::-webkit-scrollbar-thumb:hover {
     top:              0;
     transition:       top 1s, background-color 1s;
     z-index:          100;
+}
+
+.main-menu.single-page {
+    background-color: var(--main-green);
 }
 
 .main-menu__title {
@@ -218,10 +246,12 @@ body::-webkit-scrollbar-thumb:hover {
     color: var(--main-gray);
 }
 
+.single-page,
 .main-menu__listMod {
     box-shadow: 0 0.6rem 4rem var(--main-black);
 }
 
+.single-page .main-menu__link:hover,
 .main-menu__listMod .main-menu__link:hover {
     border-bottom: 0.5rem solid var(--main-gray);
 }
@@ -376,27 +406,27 @@ body::-webkit-scrollbar-thumb:hover {
 /***********************************************************************/
 
 .service-descriptions {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
+    align-items:     center;
+    display:         flex;
+    flex-wrap:       wrap;
     justify-content: space-evenly;
 }
 
 .service-description {
-    margin: 2rem 0;
+    margin:  2rem 0;
     padding: 2rem;
-    width: max(30rem, 30%);
+    width:   max(30rem, 30%);
 }
 
 .service-description__image {
-    align-items: center;
-    border-radius: 50%;
-    justify-content: center;
-    display: flex;
-    margin: 2rem auto;
+    align-items:      center;
     background-color: var(--main-darkGreen);
-    height: 20rem;
-    width: 20rem;
+    border-radius:    50%;
+    display:          flex;
+    height:           20rem;
+    justify-content:  center;
+    margin:           2rem auto;
+    width:            20rem;
 }
 
 .service-description__text {
@@ -417,31 +447,31 @@ body::-webkit-scrollbar-thumb:hover {
 /*************************************************************/
 
 .galery-services {
-    display: flex;
-    flex-wrap: wrap;
+    display:         flex;
+    flex-wrap:       wrap;
     justify-content: space-between;
 }
 
 .galery-service {
-    height: 30rem;
-    margin: 1rem 0;
-    display: flex;
-    align-items: center;
+    align-items:     center;
+    display:         flex;
+    font-size:       2.6rem;
+    font-weight:     700;
+    height:          30rem;
     justify-content: center;
-    font-weight: 700;
-    font-size: 2.6rem;
-    transition: all linear 0.2s;
+    margin:          1rem 0;
+    transition:      all linear 0.2s;
 }
 
 .galery-service a {
-    align-items: center;
+    align-items:     center;
+    display:         flex;
+    height:          100%;
     justify-content: center;
-    display: flex;
-    height: 100%;
-    padding: 2rem;
-    text-align: center;
-    transition: all linear 0.2s;
-    width: 100%;
+    padding:         2rem;
+    text-align:      center;
+    transition:      all linear 0.2s;
+    width:           100%;
 }
 
 .galery-service a:hover {
@@ -449,32 +479,26 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .galery-service--50 {
-    /* transition: all linear 0.2s; */
     width: calc(50% - 1rem);
 }
 
 .galery-service--30 {
-    /* transition: all linear 0.2s; */
     width: calc(33.33% - 1rem);
 }
 
 .galery-service--50.galery-selected {
-    /* transition: all linear 0.2s; */
     width: calc(66.8% - 1rem);
 }
 
 .galery-service--50.galery-lateral {
-    /* transition: all linear 0.2s; */
     width: calc(33.3% - 1rem);
 }
 
 .galery-service--30.galery-selected {
-    /* transition: all linear 0.2s; */
     width: calc(50% - 1rem);
 }
 
 .galery-service--30.galery-lateral {
-    /* transition: all linear 0.2s; */
     width: calc(25% - 1rem);
 }
 
@@ -490,8 +514,43 @@ body::-webkit-scrollbar-thumb:hover {
     .galery-service--30 {
         width: max(100%, 25rem);
     }
+}
 
 
+/****************************************************************/
+/************************* All Services *************************/
+/****************************************************************/
+
+.all_services__list {
+    border-radius: 2rem;
+    margin:        0 auto;
+    min-width:     25rem;
+    overflow:      hidden;
+    width:         min(100%, 80rem);
+}
+
+.all_services__link {
+    align-items:     center;
+    color:           var(--main-black);
+    display:         flex;
+    font-size:       2rem;
+    font-weight:     700;
+    justify-content: space-between;
+    padding:         2rem 4rem;
+}
+
+.all_services__price {
+    background-color: var(--second-green);
+    border-radius:    0.5rem;
+    color:            var(--main-white);
+    margin-left:      4rem;
+    padding:          0.5rem 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .all_services__list {
+        width: 100%;
+    }
 }
 
 
