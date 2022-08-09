@@ -92,7 +92,6 @@
 
     images.forEach((element) => {
         element.addEventListener('mouseout', () => {
-            console.log(indexDistribution);
             if (indexDistribution[0] !== -1) {
                 indexDistribution.forEach((element) => {
                     if (images[element].classList.contains('galery-selected')) {
