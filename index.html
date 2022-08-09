@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Fonts -->
@@ -29,7 +31,7 @@
                 </a>
             </li>
             <li class="main-menu__element">
-                <a class="main-menu__link" href="">
+                <a class="main-menu__link" href="contact.html">
                     Contacto
                 </a>
             </li>
@@ -53,7 +55,7 @@
                     </a>
                 </li>
                 <li class="menu-mobile__element">
-                    <a class="menu-mobile__link" href="">
+                    <a class="menu-mobile__link" href="contact.html">
                         Contacto
                     </a>
                 </li>
@@ -66,7 +68,7 @@
     </header>
     <main id="index">
         <section class="container service-descriptions">
-            <div class="service-description">
+            <div data-aos="zoom-in" class="service-description">
                 <h3 class="text-center">
                     Rápido
                 </h3>
@@ -83,7 +85,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officia praesentium distinctio consectetur molestiae.</p>
                 </div>
             </div>
-            <div class="service-description">
+            <div data-aos="zoom-out" class="service-description">
                 <h3 class="text-center">
                     Confiable
                 </h3>
@@ -98,7 +100,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officia praesentium distinctio consectetur molestiae.</p>
                 </div>
             </div>
-            <div class="service-description">
+            <div data-aos="zoom-in" class="service-description">
                 <h3 class="text-center">
                     Personalizado   
                 </h3>
@@ -150,6 +152,13 @@
         </div>
         <h4 class="color-mainWhite text-center">Taller Mecánico - 2022</h4>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 600,
+            once: true
+        });
+    </script>
     <script src="js/app_scroll.js"></script>
     <script src="js/app_mobile.js"></script>
 </body>

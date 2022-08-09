@@ -180,7 +180,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 #singlePage {
-    margin-top: 12rem;
+    margin-top: 14rem;
 }
 
 .text-center {
@@ -460,7 +460,7 @@ body::-webkit-scrollbar-thumb:hover {
     height:          30rem;
     justify-content: center;
     margin:          1rem 0;
-    transition:      all linear 0.2s;
+    transition:      width linear 0.1s;
 }
 
 .galery-service a {
@@ -470,7 +470,7 @@ body::-webkit-scrollbar-thumb:hover {
     justify-content: center;
     padding:         2rem;
     text-align:      center;
-    transition:      all linear 0.2s;
+    transition:      all linear 0.1s;
     width:           100%;
 }
 
@@ -521,12 +521,38 @@ body::-webkit-scrollbar-thumb:hover {
 /************************* All Services *************************/
 /****************************************************************/
 
+.all_services__titles {
+    align-items:     center;
+    display:         flex;
+    font-size:       1.8rem;
+    font-weight:     500;
+    justify-content: space-between;
+    margin:          0 auto;
+    margin-bottom:   2rem 0;
+    padding:         2rem;
+    width:           min(95%, 85rem);
+}
+
+.all_services__title_1 {
+    padding:    0 4rem 0 2rem;
+    text-align: center;
+}
+
+.all_services__title_2 {
+    padding:    0 2rem 0 4rem;
+    text-align: center;
+}
+
+.all_services__description {
+    margin-bottom: 6rem;
+}
+
 .all_services__list {
     border-radius: 2rem;
     margin:        0 auto;
     min-width:     25rem;
     overflow:      hidden;
-    width:         min(100%, 80rem);
+    width:         min(95%, 80rem);
 }
 
 .all_services__link {
@@ -548,9 +574,18 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 @media (max-width: 600px) {
-    .all_services__list {
-        width: 100%;
+    .all_services__title_1 {
+        padding: 0 4rem 0 0;
+        text-align: center;
     }
+    
+    .all_services__title_2 {
+        padding: 0 0 0 4rem;
+    }
+
+    .all_services__list {
+        width: 95%;
+    }    
 }
 
 
