@@ -178,6 +178,7 @@ body::-webkit-scrollbar-thumb:hover {
     height:           8rem;
     justify-content:  space-between;
     left:             0;
+    overflow-x: hidden;
     padding-left:     4rem;
     position:         fixed;
     right:            0;
@@ -324,6 +325,7 @@ body::-webkit-scrollbar-thumb:hover {
     height:          60rem;
     justify-content: center;
     margin-bottom:   10rem;
+    overflow-x:      hidden;
     padding:         0 10%;
     transform:       scale(1.2);    
 }
